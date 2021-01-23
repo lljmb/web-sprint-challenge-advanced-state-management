@@ -1,11 +1,13 @@
 import React, { Component } from "react";
+import axios from 'axios';
 
 import AddForm from './components/AddForm';
 import SmurfDisplay from './components/SmurfDisplay';
-import axios from 'axios';
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
+
 
 class App extends Component {
   componentDidMount() {
@@ -13,7 +15,7 @@ class App extends Component {
       console.log(res);
     })
   }
-  
+
   render() {
     return (
       <div className="App">
@@ -21,6 +23,7 @@ class App extends Component {
           <a className="navbar-brand">Smurf Village Database</a>
         </nav>
         <main>
+        {/* Add in SmurfDisplay and AddForm into your application. */}
           <AddForm/>
           <SmurfDisplay/>
         </main>
@@ -31,5 +34,3 @@ class App extends Component {
 
 export default App;
 
-//Task List:
-//1. Add in SmurfDisplay and AddForm into your application.
